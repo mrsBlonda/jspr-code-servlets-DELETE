@@ -77,6 +77,7 @@ public class Main {
           System.out.println(headers);
 
           // для GET тела нет
+
           if (!method.equals(GET)) {
             in.skip(headersDelimiter.length);
             // вычитываем Content-Length, чтобы прочитать body

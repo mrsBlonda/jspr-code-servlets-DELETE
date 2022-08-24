@@ -35,7 +35,11 @@ public class PostController {
     response.getWriter().print(gson.toJson(data));
   }
 
-  public void removeById(long id, HttpServletResponse response) {
-    // TODO: deserialize request & serialize response
+  public void removeById(long id, HttpServletResponse response) throws IOException {
+    response.setContentType(APPLICATION_JSON);
+    final var gson = new Gson();
+    service.removeById(id);
+    final var data = service.all();
+    response.getWriter().print(gson.toJson(data));
   }
 }

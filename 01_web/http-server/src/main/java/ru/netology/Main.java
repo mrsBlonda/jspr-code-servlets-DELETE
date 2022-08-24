@@ -28,6 +28,9 @@ public class Main {
             continue;
           }
 
+
+
+
           final var path = parts[1];
           if (!validPaths.contains(path)) {
             out.write((
