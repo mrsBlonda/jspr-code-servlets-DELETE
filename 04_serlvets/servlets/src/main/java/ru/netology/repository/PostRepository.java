@@ -18,6 +18,16 @@ public class PostRepository {
   }
 
   public Optional<Post> getById(long id) {
+    Post post;
+    if (treeMap.containsKey(id)) {
+      for (var set : treeMap.entrySet()) {
+
+        post = new Post(id, set.getValue());
+    }
+
+
+    }
+    post = ;
     return Optional.empty();
   }
 
